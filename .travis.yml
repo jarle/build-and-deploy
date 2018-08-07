@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
 script:
-  - npm run lint
-  - npm run test
-  - npm run build
+- npm run lint
+- npm run test
+- npm run build
+deploy:
+  provider: heroku
+  app: jarle-build-and-deploy-2018
+  skip_cleanup: true
+  api_key:
+    secure: lio7rxNT8kee8GX8l9b3n/sYjMnnitHm3ZmN1X70A4y2YzYHb4h/Y6tAejltTydEWiKsV5SG0ap4zKGCFwWHI0yliBms16VYOm9s9xuitAyd2v0J19YjRK+J6HVns2ZUDXdDH4dpM1NGnmkX0BajVWwatA7P6SRrL+8XglNq0cMhiVhB+1ZLVvnEydiXd6ILzKBTh1b4deG23bZrlx+JrZQmaqGtxbrnVqeDNXEW3RbkusUAiFfyYOEfUwSi1vePoLwZtzEOx3yyCIP20noJwDVo7j60P5tX6JRtIWSK7gELwkXX2swEbI5uS4PkcjjtZRRHYyi8FWH1goQNnxGYDP5CvCyo+DK3MPdSqTur5tmTCNhnmfhz403Vq1dZL+H+f/btEYPTU6dChw6B8GtoCwMHJqirNpFjGLmdODg0Nj30dyTeqaGLPGdCl+3plaIwDxQGE9+kPF7mjD7ZGCiprb1FsKk4BNCg2kjkjb1bF78hulNTZeJTwTLH7rzVY7knGUBsUFhdD7IHtV5ds4gnGGPh/jfSq++oILSNkGJOG9XuxlXi4Pam6LK5NJN5O2j4DfH1sMTE6uceQiWF7ZqIYbJGwTTwGO/QENiQc9r1ptL5n8smjOMbyzt+rXRiHvpaqZm/oB2LFO7L7Bo3xbbDdaLzRma8+wZWj9vyw7WV/v4=
